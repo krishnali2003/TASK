@@ -46,10 +46,10 @@ A JWT token will be returned, which you will use for all other API requests.
 |--------|-------------------|--------------------------------|
 | POST   | `/authenticate`   | Login to get JWT token        |
 | GET    | `/companies`      | Get all company records       |
-| GET    | `/companies/{id}` | Get a company by ID           |
+| GET    | `/companies/{code}` | Get a company by code           |
 | POST   | `/companies`      | Create a new company record   |
-| PUT    | `/companies/{id}` | Update an existing company    |
-| DELETE | `/companies/{id}` | Delete a company record       |
+| PUT    | `/companies/{code}` | Update an existing company    |
+| DELETE | `/companies/{code}` | Delete a company record       |
 
 ## 📜 License
 This project is open-source and available under the MIT License.
