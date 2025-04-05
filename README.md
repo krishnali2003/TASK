@@ -1,117 +1,58 @@
-# CompanyApiJwt 🚀
+# Company API with JWT Authentication
 
-This is a RESTful API built using ASP.NET Core that allows you to **Create, Read, Update, and Delete (CRUD)** company data. The API is secured using **JWT authentication**.
+This is a simple REST API built with C# and ASP.NET Core that features JWT-based authentication and basic CRUD operations for managing company records.
 
----
-
-## 🔐 Authentication
-
-To access the API, you must first log in with:
-
+## 🔑 Authentication
+To authenticate, use the following credentials:
 ```json
 {
   "username": "admin",
   "password": "password"
 }
+```
 A JWT token will be returned, which you will use for all other API requests.
 
-📦 Features
-✅ JWT-based login
-✅ In-memory storage for company records
-✅ CRUD operations on company data
-✅ Token-protected endpoints
-✅ Tested with Postman
+## 🚀 Features
+- ✅ JWT-based login
+- ✅ In-memory storage for company records
+- ✅ CRUD operations on company data
+- ✅ Token-protected endpoints
+- ✅ Tested with Postman
 
-🏗️ Setup Instructions
-🔧 Prerequisites
-.NET SDK 8.0
+## 🛠 Setup Instructions
 
-Visual Studio 2022+ or VS Code
+### 📌 Prerequisites
+- .NET SDK 8.0
+- Visual Studio 2022+ or VS Code
+- Postman (for API testing)
 
-Postman (API testing)
+### 📌 How to Run
+1. Open the project in Visual Studio.
+2. Build the solution: `Ctrl + Shift + B`
+3. Run the project: Press `F5` or click the Run button.
+4. The API will be available at:
+   ```
+   https://localhost:7054
+   ```
 
-🚀 How to Run
-Open the project in Visual Studio
+### 📌 How to Test with Postman
+1. Send a `POST` request to `https://localhost:7054/authenticate` with the login credentials.
+2. Copy the returned JWT token.
+3. Include the token in the `Authorization` header as `Bearer <token>` for all other API requests.
+4. Test CRUD operations on company records using the appropriate endpoints.
 
-Build the solution: Ctrl + Shift + B
+## 📂 API Endpoints
+| Method | Endpoint           | Description                    |
+|--------|-------------------|--------------------------------|
+| POST   | `/authenticate`   | Login to get JWT token        |
+| GET    | `/companies`      | Get all company records       |
+| GET    | `/companies/{id}` | Get a company by ID           |
+| POST   | `/companies`      | Create a new company record   |
+| PUT    | `/companies/{id}` | Update an existing company    |
+| DELETE | `/companies/{id}` | Delete a company record       |
 
-Run the project: F5 or click the Run button
+## 📜 License
+This project is open-source and available under the MIT License.
 
-The API will be available at:
-https://localhost:7054
-
-🧪 How to Test with Postman
-1️⃣ Login and Get Token
-Method: POST
-
-URL: https://localhost:7054/api/auth/login
-
-Body (raw JSON):
-
-json
-Copy
-Edit
-{
-  "username": "admin",
-  "password": "password"
-}
-Copy the token from the response.
-
-2️⃣ Set Authorization in Postman
-Click Authorization tab
-
-Type: Bearer Token
-
-Paste the token you copied
-
-3️⃣ Use These API Endpoints
-🔹 Add a Company
-Method: POST
-
-URL: https://localhost:7054/api/companies
-🔹 Get All Companies
-Method: GET
-
-URL: https://localhost:7054/api/companies
-
-🔹 Get Company by Code
-Method: GET
-
-URL: https://localhost:7054/api/companies/code
-
-🔹 Update Company
-Method: PUT
-
-URL: https://localhost:7054/api/companies/code
-
-🔹 Delete Company
-Method: DELETE
-
-URL: https://localhost:7054/api/companies/C101
-
-📂 Folder Structure
-pgsql
-Copy
-Edit
-CompanyApiJwt/
-│
-├── Controllers/
-│   ├── AuthController.cs
-│   └── CompanyController.cs
-│
-├── Models/
-│   └── Company.cs
-│
-├── Services/
-│   └── JwtService.cs
-│
-├── Program.cs
-├── appsettings.json
-└── README.md
-
-✍️ Author
-Krishnali Patil
-📧 patilkrishnali2003@gmail.com
-
-
-
+---
+Made with ❤️ by Krishnali Patil
