@@ -1,0 +1,341 @@
+{
+	"info": {
+		"_postman_id": "7cf6c53d-d43c-455e-8b9e-6f63e4fef553",
+		"name": "Collection1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41463045"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:7054/api/auth/login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJleHAiOjE3NDM4MzE5ODcsImlzcyI6IllvdXJDb21wYW55QXBpIiwiYXVkIjoiWW91ckNvbXBhbnlBcGlVc2VycyJ9.OUBEBQCvYoc1EQlW94gXjFnHu6U028Oo_Luhi00coeU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"admin\",\r\n  \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7054/api/auth/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7054",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:7054/api/auth/login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"admin\",\r\n  \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7054/api/auth/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7054",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:7054/api/companies",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const response = pm.response.json();\r",
+							"pm.environment.set(\"token\", response.token);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJleHAiOjE3NDM4MzE5ODcsImlzcyI6IllvdXJDb21wYW55QXBpIiwiYXVkIjoiWW91ckNvbXBhbnlBcGlVc2VycyJ9.OUBEBQCvYoc1EQlW94gXjFnHu6U028Oo_Luhi00coeU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"admin\",\r\n  \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7054/api/companies",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7054",
+					"path": [
+						"api",
+						"companies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:7054/api/auth/login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"admin\",\r\n  \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7054/api/auth/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7054",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:7054/api/companies/XYZ001",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const response = pm.response.json();\r",
+							"pm.environment.set(\"token\", response.token);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJleHAiOjE3NDM4MzE5ODcsImlzcyI6IllvdXJDb21wYW55QXBpIiwiYXVkIjoiWW91ckNvbXBhbnlBcGlVc2VycyJ9.OUBEBQCvYoc1EQlW94gXjFnHu6U028Oo_Luhi00coeU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"companyName\": \"LMN Corp\",\r\n  \"companyAddress\": \"123 Main St, NY\",\r\n  \"companyGSTN\": \"22AAAAA0000A1Z5\",\r\n  \"companyCode\": \"XYZ002\",\r\n  \"companyUserId\": \"xyz_admin\",\r\n  \"companyStatus\": \"active\",\r\n  \"companyStartDate\": \"2025-01-01T10:00:00Z\",\r\n  \"companyNatureOfWork\": \"Finance\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7054/api/companies/XYZ001",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7054",
+					"path": [
+						"api",
+						"companies",
+						"XYZ001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:7054/api/companies/XYZ002",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const response = pm.response.json();\r",
+							"pm.environment.set(\"token\", response.token);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJleHAiOjE3NDM4MzE5ODcsImlzcyI6IllvdXJDb21wYW55QXBpIiwiYXVkIjoiWW91ckNvbXBhbnlBcGlVc2VycyJ9.OUBEBQCvYoc1EQlW94gXjFnHu6U028Oo_Luhi00coeU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"companyName\": \"LMN Corp\",\r\n  \"companyAddress\": \"123 Main St, NY\",\r\n  \"companyGSTN\": \"22AAAAA0000A1Z5\",\r\n  \"companyCode\": \"XYZ002\",\r\n  \"companyUserId\": \"xyz_admin\",\r\n  \"companyStatus\": \"active\",\r\n  \"companyStartDate\": \"2025-01-01T10:00:00Z\",\r\n  \"companyNatureOfWork\": \"Tech\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7054/api/companies/XYZ002",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7054",
+					"path": [
+						"api",
+						"companies",
+						"XYZ002"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:7054/api/companies/XYZ001",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const response = pm.response.json();\r",
+							"pm.environment.set(\"token\", response.token);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJleHAiOjE3NDM4MzE5ODcsImlzcyI6IllvdXJDb21wYW55QXBpIiwiYXVkIjoiWW91ckNvbXBhbnlBcGlVc2VycyJ9.OUBEBQCvYoc1EQlW94gXjFnHu6U028Oo_Luhi00coeU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"companyName\": \"LMN Corp\",\r\n  \"companyAddress\": \"123 Main St, NY\",\r\n  \"companyGSTN\": \"22AAAAA0000A1Z5\",\r\n  \"companyCode\": \"XYZ002\",\r\n  \"companyUserId\": \"xyz_admin\",\r\n  \"companyStatus\": \"active\",\r\n  \"companyStartDate\": \"2025-01-01T10:00:00Z\",\r\n  \"companyNatureOfWork\": \"Tech\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7054/api/companies/XYZ001",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7054",
+					"path": [
+						"api",
+						"companies",
+						"XYZ001"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
